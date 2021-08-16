@@ -2,13 +2,7 @@ from datetime import datetime, timedelta
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 import requests
-from django.shortcuts import render, HttpResponse
 import json
-@api_view(['GET'])
-def index(request):
-    yoko = requests.get('https://api.github.com/users/mohamed7632')
-    content = yoko.text
-    return HttpResponse(content)
 
 
 @api_view(['GET'])
